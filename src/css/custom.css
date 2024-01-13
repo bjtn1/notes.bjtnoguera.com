@@ -59,7 +59,7 @@ code {
   background-color: var(--navbar-bg);
 }
 
-/* Taken from https://github.com/LunarVim/lunarvim.org/blob/master/src/css/custom.css */
+/* Next three css rules taken from https://github.com/LunarVim/lunarvim.org/blob/master/src/css/custom.css */
 .social {
   display: flex;
   align-items: center;
