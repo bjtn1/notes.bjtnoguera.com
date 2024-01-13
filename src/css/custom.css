@@ -20,7 +20,7 @@
 
   /* Tokyonight-night theme */
   --black: #16161e;
-  --search-bg: rgba(255, 255, 255, 0.08);
+  --navbar-bg: rgba(255, 255, 255, 0.02);
   --white: #c8d3f5;
   --white-50: #c8d3f580;
   --blue: #82aaff;
@@ -56,7 +56,7 @@ code {
 }
 
 .navbar, .navbar-sidebar {
-  background-color: var(--black);
+  background-color: var(--navbar-bg);
 }
 
 /* Taken from https://github.com/LunarVim/lunarvim.org/blob/master/src/css/custom.css */
