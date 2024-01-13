@@ -56,7 +56,7 @@ code {
 }
 
 .navbar, .navbar-sidebar {
-  background-color: var(--navbar-bg);
+  background-color: var(--black);
 }
 
 /* Next three css rules taken from https://github.com/LunarVim/lunarvim.org/blob/master/src/css/custom.css */
