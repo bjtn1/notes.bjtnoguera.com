@@ -1,0 +1,81 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  color: #C8D3F5;
+  background-color: #16161e;
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Tokyonight-night theme */
+  --black: #16161e;
+  --search-bg: rgba(255, 255, 255, 0.08);
+  --white: #c8d3f5;
+  --white-50: #c8d3f580;
+  --blue: #82aaff;
+  --cyan: #86e1fc;
+  --purple: #fca7ea;
+  --magenta: #c099ff;
+  --orange: #ff966c;
+  --yellow: #ffc777;
+  --green: #c3e88d;
+  --red: #ff757f;
+  --teal: #4fd6be;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  /* --ifm-background-color: #16161e; */
+  --ifm-color-primary: #82aaff;
+  --ifm-color-primary-dark: #5b90ff;
+  --ifm-color-primary-darker: #4883ff;
+  --ifm-color-primary-darkest: #0f5bff;
+  --ifm-color-primary-light: #a8c4ff;
+  --ifm-color-primary-lighter: #bcd1ff;
+  --ifm-color-primary-lightest: #f5f9ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+p {
+  color: var(--white);
+}
+
+code {
+  color: var(--teal);
+}
+
+.navbar, .navbar-sidebar {
+  background-color: var(--black);
+}
+
+/* Taken from https://github.com/LunarVim/lunarvim.org/blob/master/src/css/custom.css */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+}
+
+.social path {
+  fill: var(--primary-fg);
+}
+
+.social:hover path {
+  fill: var(--ifm-color-primary);
+}
+
+/* Closing symbol in the announcement bar */
+.close {
+  color: var(--magenta);
+}
