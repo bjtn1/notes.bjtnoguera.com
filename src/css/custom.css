@@ -77,5 +77,5 @@ code {
 
 /* Closing symbol in the announcement bar */
 .close {
-  color: var(--white);
+  color: var(--black);
 }
