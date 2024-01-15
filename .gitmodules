@@ -1,3 +1,3 @@
-[submodule "static/c-programming-a-modern-approach"]
-	path = static/c-programming-a-modern-approach
+[submodule "static/c"]
+	path = static/c
 	url = https://github.com/bjtn1/c-programming-a-modern-approach.git

@@ -160,5 +160,4 @@ int main(void) {
 ### Program: Computing the Dimensional Weight of a Box
 
 ## Chapter 2.5: Reading input
-# STOPPED AT PAGE 47
 
