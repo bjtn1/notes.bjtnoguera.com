@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cdff673b-5c96-4a0e-8157-0ceca1a32235/deploy-status)](https://app.netlify.com/sites/bjtnotes/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/960d31ad-ad4d-46be-b91b-db2196d77411/deploy-status)](https://app.netlify.com/sites/notesbjtnoguera/deploys)
 
 # Motivation
 As my graduation date approaches, I've looked back at the courses and topics I've learned over the years, only to realize that I have a lot of gaps in my knowledge; this website exists as a way for me to fill in those gaps.
