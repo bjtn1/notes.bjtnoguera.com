@@ -4,7 +4,7 @@ description: "Learn about the fundamentals of the C programming language"
 
 # Chapter 2: C fundamentals
 
-> Here's the [link to my repo containing the exercises/projects for this chapter](https://github.com/bjtn1/c-programming-a-modern-approach)
+> Here's the [link to the folder containing the exercises/projects for this chapter](https://github.com/bjtn1/notes.bjtnoguera.com/tree/main/docs/c-programming-language/assets/c/2-chapter)
 
 ## Chapter 2.1: A Bad Pun program
 ```c showLineNumbers
