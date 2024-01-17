@@ -57,6 +57,9 @@ code {
 
 .navbar, .navbar-sidebar {
   background-color: var(--black);
+  font-weight: 700;
+  font-size: 1rem; /* 20px */
+  line-height: 1.5rem; /* 28px */
 }
 
 /* Next three css rules taken from https://github.com/LunarVim/lunarvim.org/blob/master/src/css/custom.css */
