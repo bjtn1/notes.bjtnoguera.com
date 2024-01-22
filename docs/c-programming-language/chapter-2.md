@@ -1,4 +1,5 @@
 ---
+draft: true
 description: "Learn about the fundamentals of the C programming language"
 ---
 
