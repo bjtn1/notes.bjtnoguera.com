@@ -1,3 +1,6 @@
+---
+draft: true
+---
 # Linear Algebra
 
 ## Link to pdf file
