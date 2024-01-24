@@ -2,6 +2,7 @@
 sidebar_position: 1
 slug: "/"
 title: "Welcome!"
+description: The homepage of Brandon J. T. Noguera's notes
 ---
 Welcome to my notes!
 
