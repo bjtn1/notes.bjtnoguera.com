@@ -21,6 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Created by me
+course-info/
 textbook/
 textbook.pdf
 *.mov
