@@ -12,7 +12,7 @@ const FeatureList = [
         used to get your website up and running quickly.
       </>
     ),
-***REMOVED***
+  },
   {
     title: 'Focus on What Matters',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
@@ -22,7 +22,7 @@ const FeatureList = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
-***REMOVED***
+  },
   {
     title: 'Powered by React',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
@@ -32,7 +32,7 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
-***REMOVED***
+  },
 ];
 
 function Feature({Svg, title, description}) {
@@ -54,7 +54,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-      ***REMOVED***FeatureList.map((props, idx) => (
+          {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>

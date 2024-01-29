@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
 
-***REMOVED***
+// @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -21,13 +21,13 @@ const sidebars = {
   tutorialSidebar: [
     'intro',
     'hello',
-***REMOVED***
+    {
       type: 'category',
       label: 'Tutorial',
-***REMOVED***'tutorial-basics/create-a-document'],
-  ***REMOVED***
-***REMOVED***
+      items: ['tutorial-basics/create-a-document'],
+    },
+  ],
    */
-***REMOVED***
+};
 
 export default sidebars;

@@ -1,7 +1,7 @@
 // Code taken from https://github.com/LunarVim/lunarvim.org/blob/master/socials.js
 const generateA = (url, icon) => {
   return `<a class='social' href=${url} target='_blank' rel='noopener noreferrer'>${icon}</a>`;
-***REMOVED***
+};
 
 const socials = [
   generateA(
