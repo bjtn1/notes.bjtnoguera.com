@@ -46,5 +46,60 @@ description: "Where we learn about operating and computer systems, what they do,
 
 - Middleware is software that provides additional services to application developers
 
-## Chapter 1.2: Compute system organization
+## Chapter 1.2: Computer system organization
 
+- A computer's system is composed of:
+    - One or many CPUs
+    - One or more devices connected to the computer
+    - A device controller for each device connected to the computer
+    - A device driver for each device controller connected to the computer
+    - A system bus that connects all the CPUs and all device CONTROLLERS to memory
+
+- A system bus is the main communications path between major computer components
+
+![](./assets/fig1.2.1.png)
+
+### Interrupts
+
+#### Overview
+
+Interrupts are signals that stop the CPU from whatever it is currently doing, and tell it to change its focus to the event that trigerred the interrupt.
+
+When you plug in your keyboard to start typing away, this happens:
+1. The device driver loads the appropriate registers in the device controller
+2. The device controller looks at the registers to determine what to do (i.e.: read from keyboard)
+3. The device controller transfers data from the device to its local buffer (memory)
+4. When the data has finished transferring, the device controller tells the device driver that the operation is finished
+5. The device driver gives control back to the other parts of the operating system
+
+![](./assets/fig1.2.2.png)
+
+As you can see in the picture above, whenever the I/O device is ***in the process of transferring data***, nothing happens to the CPU.
+
+It is only ***after the I/O device is done transferring data*** that the interrupt signal is sent to the CPU, stopping it from whatever it was doing, and forcing it to handle it.
+
+The CPU only returns back to its previous process ***after*** handling the interrupt
+
+An ***interrupt vector*** is a table of pointers to interrupt service routines, so the CPU has an easier and faster time figuring out where to go to handle each interrupt
+
+Interrupt vectors must save the state of whatever was interrupted
+
+#### Implementation
+
+The interrupt mechanism is implemented through:
+
+- A wire called ***the interrupt-request line***
+- A [BLANK] called the ***interrupt handler*** that handles the interrupt and returns the "wheel" to the CPU
+
+
+Life cycle of an interrupt is as follows:
+1. Device controller ***raises*** an interrupt
+2. CPU ***catches*** the interrupt
+3. CPU ***dispatches*** the interrupt to the ***interrupt handler***
+4. Interrupt handler ***clears*** the interrupt by servicing the device
+
+![](./assets/f1.2.3.png)
+
+#### New problems
+
+What if the interrupt 
