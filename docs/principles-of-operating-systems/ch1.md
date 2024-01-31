@@ -17,22 +17,33 @@ description: "Where we learn about operating and computer systems, what they do,
 
 ## Chapter 1.1: What operating systems do
 
-- An operating system is software that manages a computer's hardware
+<details>
+<summary>What are the 4 components of a computer system?</summary>
+<div>- Hardware</div>
+<div>- Application programs</div>
+<div>- Operating system</div>
+<div>- A user</div>
+</details>
 
-- Computer systems are divided into 4 components:
-    - Hardware
-    - Application programs
-    - Operating system
-    - A user
+<details>
+<summary>What is a computer's hardware made out of?</summary>
+<div>- One or more CPUs</div>
+<div>- I/O devices</div>
+<div>- Memory</div>
+</details>
 
-- A computer's hardware provides resources that the operating system will manage
 
-- A computer's hardware is made out of:
-    - Memory
-    - CPU (Central processing Unit)
-    - I/O (Input/Output) devices
+<details>
+<summary>What is an Operating System (OS) composed of?</summary>
+<div>- A kernel that is loaded when the computer turns on</div>
+<div>- Kernel functions loaded at runtime</div>
+<div>- Any system programs related to the kernel</div>
+</details>
 
-- Application programs are software that require resources from the computer's hardware to carry out their duty
+<details>
+<summary>What is middleware?</summary>
+<div>- These are application programs for developers that provide additional services</div>
+</details>
 
 <details>
 <summary>The book's definition of what an OS is</summary>
@@ -44,18 +55,18 @@ description: "Where we learn about operating and computer systems, what they do,
         </ul>
 </details>
 
-- Middleware is software that provides additional services to application developers
-
 ## Chapter 1.2: Computer system organization
 
-- A computer's system is composed of:
-    - One or many CPUs
-    - One or more devices connected to the computer
-    - A device controller for each device connected to the computer
-    - A device driver for each device controller connected to the computer
-    - A system bus that connects all the CPUs and all device CONTROLLERS to memory
-
-- A system bus is the main communications path between major computer components
+<details>
+    <summary>What is a computer's system composed of?</summary>
+    <ul>
+        <li>One or many CPUs</li>
+        <li>One or more devices connected to the computer</li>
+        <li>A device controller for each device connected to the computer</li>
+        <li>A device driver for each device controller</li>
+        <li>A system bus that acts as the main communications path between devices and memory</li>
+    </ul>
+</details>
 
 ![](./assets/fig1.2.1.png)
 
@@ -63,14 +74,10 @@ description: "Where we learn about operating and computer systems, what they do,
 
 #### Overview
 
-Interrupts are signals that stop the CPU from whatever it is currently doing, and tell it to change its focus to the event that trigerred the interrupt.
-
-When you plug in your keyboard to start typing away, this happens:
-1. The device driver loads the appropriate registers in the device controller
-2. The device controller looks at the registers to determine what to do (i.e.: read from keyboard)
-3. The device controller transfers data from the device to its local buffer (memory)
-4. When the data has finished transferring, the device controller tells the device driver that the operation is finished
-5. The device driver gives control back to the other parts of the operating system
+<details>
+<summary>What is an interrupt?</summary>
+<div>A signal sent to the CPU telling it to stop what its doing and handle the device that triggered the interrupt</div>
+</details>
 
 ![](./assets/fig1.2.2.png)
 
@@ -80,26 +87,99 @@ It is only ***after the I/O device is done transferring data*** that the interru
 
 The CPU only returns back to its previous process ***after*** handling the interrupt
 
-An ***interrupt vector*** is a table of pointers to interrupt service routines, so the CPU has an easier and faster time figuring out where to go to handle each interrupt
-
-Interrupt vectors must save the state of whatever was interrupted
-
 #### Implementation
-
-The interrupt mechanism is implemented through:
-
-- A wire called ***the interrupt-request line***
-- A [BLANK] called the ***interrupt handler*** that handles the interrupt and returns the "wheel" to the CPU
-
-
-Life cycle of an interrupt is as follows:
-1. Device controller ***raises*** an interrupt
-2. CPU ***catches*** the interrupt
-3. CPU ***dispatches*** the interrupt to the ***interrupt handler***
-4. Interrupt handler ***clears*** the interrupt by servicing the device
 
 ![](./assets/f1.2.3.png)
 
-#### New problems
 
-What if the interrupt 
+<details>
+<summary>What is an interrupt vector table?</summary>
+<div>A data structure that associates interrupt handlers with interrupt requests</div>
+</details>
+
+<details>
+<summary>What must an interrupt vector table keep track of?</summary>
+<div>It must keep track of the state before the CPU changed its focus to handling the interrupt</div>
+</details>
+
+<details>
+<summary>How is an interrupt mechanism implemented?</summary>
+    <div>- An ***interrupt request line***</div>
+    <div>- An ***interrupt handler***</div>
+</details>
+
+<details>
+<summary>What is an interrupt request line (IRQ)?</summary>
+<div>It's an electrical line or channel that signals the CPU about an interrupt</div>
+</details>
+
+<details>
+<summary>What is an interrupt handler?</summary>
+<div>A block of code responsible for handling an interrupt and giving the wheel back to the CPU</div>
+</details>
+
+<details>
+<summary>What is the life cycle of an interrupt?</summary>
+<div>1. A device ***raises*** an interrupt</div>
+<div>2. The CPU ***catches*** the interrupt</div>
+<div>3. The CPU ***dispatches*** the interrupt to the interrupt handler</div>
+<div>4. The interrupt handler ***clears*** the device by servicing the device</div>
+</details>
+
+<details>
+<summary>What is a non-maskable interrupt (NMI)?</summary>
+<div>An interrupt that the system cannot ignore</div>
+</details>
+
+<details>
+<summary>What is a maskable interrupt </summary>
+<div>An interrupt that the system can ignore</div>
+</details>
+
+<details>
+<summary>What is interrupt chaining?</summary>
+<div>Interrupt chaining is an implementation of the interrupt vector table in which each interrupt request line is associated with a linked list of interrupt handlers</div>
+</details>
+
+<details>
+<summary>What problem does interrupt chaining try to solve?</summary>
+<div>The problem of having more devices than available interrupt handlers</div>
+</details>
+
+
+### Storage structure
+
+<details>
+    <summary>What is a bootstrap program?</summary>
+    <div>A program that loads the Operating System when the computer is turned on. This is the first program to run on a computer</div>
+</details>
+
+<details>
+    <summary>What is electrically erasable programmable read-only memory (EEPROM) used for?</summary>
+    <div>It's used for holding the bootstrap program</div>
+</details>
+
+<details>
+    <summary>Why can't we store the bootstrap program in RAM?</summary>
+    <div>Cause RAM is volatile, so if the computer loses power, everything in RAM is gone</div>
+</details>
+
+<details>
+    <summary>Why do we use EEPROM to store the bootstrap program?</summary>
+    <div>Because EEPROM is rarely written to, and it is non-volatile (this means that anything store in EEPROM survives a reboot/loss of power)</div>
+</details>
+
+![](./assets/f1.2.4.png)
+
+
+### I/O Structure
+
+<details>
+    <summary>What is direct access memory (DMA)?</summary>
+    <div>It's a feature of modern computers that allows a device to access a computer's main memory and transfer data independently of the CPU</div>
+</details>
+
+<details>
+    <summary>Why does DMA exist?</summary>
+    <div>DMA exists because it lessens the workload on the CPU</div>
+</details>
