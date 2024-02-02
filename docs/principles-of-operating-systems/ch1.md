@@ -183,3 +183,22 @@ The CPU only returns back to its previous process ***after*** handling the inter
     <summary>Why does DMA exist?</summary>
     <div>DMA exists because it lessens the workload on the CPU</div>
 </details>
+
+![](./assets/pa1.2.3.png)
+
+### Section Review Questions
+
+<details>
+    <summary>What do we call the signal used by device controllers to inform device drivers that it has completed an I/O operation</summary>
+    <div>An interrupt</div>
+</details>
+
+<details>
+    <summary>Describe what a maskable interrupt is</summary>
+    <div>A maskable interrupt is an interrupt that can be temporarily disabled</div>
+</details>
+
+<details>
+    <summary>Which of these has the largest capacity: Registers, hard-disk drives, or non-volatile memory</summary>
+    <div>Non-volatile memory</div>
+</details>
