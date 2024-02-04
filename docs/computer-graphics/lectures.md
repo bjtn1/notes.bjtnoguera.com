@@ -1,10 +1,9 @@
 ---
 sidebar_position: 2
+description: "Notes taken from in-person lectures. Dates are in YYYY-MM-DD format"
 ---
 
-# Introduction
-
-> Notes taken from the lecture given on the 31st of January, 2024
+# 2024-01-31
 
 Oof wtf
 
