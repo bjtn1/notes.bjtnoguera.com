@@ -41,4 +41,9 @@ description: "Where we learn about operating and computer systems, what they do,
 
 ![](./assets/sg2.1.png)
 
+## Chapter 2.2: User and operating-system interface
+
+![](./assets/sg2.2.png)
+
+## Chapter 2.3: System calls
 
