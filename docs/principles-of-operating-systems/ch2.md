@@ -70,6 +70,11 @@ description: "Where we learn about operating and computer systems, what they do,
     </ul>
 </details>
 
+<details>
+    <summary>What does a Run-Time Environment (RTE) provide?</summary>
+    <div>A full bundle of compiler, libraries, and laoders to be able to execute applications written in a given programming language</div>
+</details>
+
 ![](./assets/f2.3.3.png)
 
 ![](./assets/standard-c-library.png)
@@ -108,3 +113,9 @@ description: "Where we learn about operating and computer systems, what they do,
 </details>
 
 ![](./assets/sg2.5.png)
+
+## Chapter 2.6: Why applications are operating-system specific
+
+Wow, to make my program runnable on different operating systems, I'm gonna have to write it in either Java or an interpreted Language LOL
+
+![](./assets/sg2.6.png)
