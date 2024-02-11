@@ -123,3 +123,66 @@ Wow, to make my program runnable on different operating systems, I'm gonna have 
 ## Chapter 2.7: Operating-system design and implementation
 
 ![](./assets/sg2.7.png)
+
+## Chapter 2.8: Operating-system structure
+
+<details>
+    <summary>What is a monolithic structure?</summary>
+    <div>A way of organizing an operating system in which you put all of the kernel's functionality into a single, static binary file that runs in a single address space</div>
+</details>
+
+<details>
+    <summary>What is one advantage of monolithic structures?</summary>
+    <div>They have very little overhead inthe system-call interface</div>
+</details>
+
+<details>
+    <summary>What is one disadvantage of monolithic structures?</summary>
+    <div>They're difficult to implement and extend</div>
+</details>
+
+![](./assets/f2.8.1.png)
+
+![](./assets/f2.8.2.png)
+
+<details>
+    <summary>What is a layered approach structure?</summary>
+    <div>It is a way of organizing an operating system by dividing it into separate, smaller components that have specific and limited functionality. The bottom layer is layer 0, the highest layer is layer N</div>
+</details>
+
+![](./assets/f2.8.3.png)
+
+<details>
+    <summary>What is one advantage of the layered approach?</summary>
+    <div>It is easier to construct and debug, and changing one layer affects only that layer (as opposed to the monolithic approach where changes in one place affect everyone)</div>
+</details>
+
+<details>
+    <summary>What is one disadvantage of the layered approach?</summary>
+    <div>The layered approach results in poor performance due to the overhead of having to traverse so many layers</div>
+</details>
+
+<details>
+    <summary>What is the microkernel approach?</summary>
+    <div>It is a way of organizing an operating system by separating non-essential components from the kernel, implementing them as user-level programs, and putting them in different address spaces</div>
+</details>
+
+![](./assets/f2.8.4.png)
+
+<details>
+    <summary>What is one advantage of the microkernel approach?</summary>
+    <div>Easier to extend the OS. Easier portability of OS. Increased security and reliability</div>
+</details>
+
+
+<details>
+    <summary>What is one disadvantage of the microkernel approach?</summary>
+    <div>Lower performance due to increased system-function overhead. User-level services that need to communicate with one another live in different address spaces</div>
+</details>
+
+<details>
+    <summary>What is a Loadabale Kernel Module (LKM)?</summary>
+    <div>An operating-system design where the kernel has a bunch of core components, and it can "call in" additional services via modules either at boot time or during run time</div>
+</details>
+
+![](./assets/sg2.8.png)
