@@ -8,7 +8,7 @@ description: "Where we learn about operating and computer systems, what they do,
 ## Objectives of this chapter
 - What services does an operating system provide?
 - How are system calls used to provide operating system services?
-- Compare and contrast monolithic, latered, microkernel, modular, and hybrid strategies for designing operating systems
+- Compare and contrast monolithic, layered, microkernel, modular, and hybrid strategies for designing operating systems
 - Describe/illustrate the process for booting an operating system
 - What tools are used to monitoring operating system performance?
 - How are monitoring tools used to monitor operating system performance?
@@ -119,3 +119,7 @@ description: "Where we learn about operating and computer systems, what they do,
 Wow, to make my program runnable on different operating systems, I'm gonna have to write it in either Java or an interpreted Language LOL
 
 ![](./assets/sg2.6.png)
+
+## Chapter 2.7: Operating-system design and implementation
+
+![](./assets/sg2.7.png)
