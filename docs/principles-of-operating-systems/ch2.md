@@ -76,4 +76,19 @@ description: "Where we learn about operating and computer systems, what they do,
 
 ![](./assets/sg2.3.png)
 
+## Chapter 2.4: System services
 
+<details>
+    <summary>What are the 7 categories of system services/utilities?</summary>
+    <ul>
+        <li>File management</li>
+        <li>Status information</li>
+        <li>File modification</li>
+        <li>Programming language support</li>
+        <li>Program loading and execution</li>
+        <li>Communications</li>
+        <li>Background services</li>
+    </ul>
+</details>
+
+![](./assets/sg2.4.png)
