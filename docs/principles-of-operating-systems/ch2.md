@@ -186,3 +186,11 @@ Wow, to make my program runnable on different operating systems, I'm gonna have 
 </details>
 
 ![](./assets/sg2.8.png)
+
+## Chapter 2.9: Building and booting an operating system
+
+:::important
+I skimmed this chapter because it seems to only talk about loading Linux, which porject 0 of this course already does
+:::
+
+![](./assets/sg2.9.png)
