@@ -203,7 +203,7 @@ The CPU only returns back to its previous process ***after*** handling the inter
     <div>Non-volatile memory</div>
 </details>
 
-## 1.3 Computer System Architecture
+## Chapter: 1.3 Computer System Architecture
 
 ### Single-processor systems
 
@@ -336,3 +336,245 @@ The CPU only returns back to its previous process ***after*** handling the inter
 </details>
 
 ![](./assets/f1.3.4.png)
+
+## Chapter 1.4: Operating System Operations
+
+<details>
+    <summary>What is a system daemon?</summary>
+    <div>Programs that are loaded at boot time</div>
+</details>
+
+<details>
+    <summary>What is a trap (or an exception)?</summary>
+    <div>A software-generated interrupt</div>
+</details>
+
+<details>
+    <summary>How does multiprogramming work?</summary>
+    <div>The OS keeps track of several processes in memory. The CPU executes one of them. When that process needs to wait, CPU switches focus to another process and executes it.</div>
+</details>
+
+![](./assets/f1.4.1.png)
+
+<details>
+    <summary>What is a process in a multiprogrammed system?</summary>
+    <div>A program that is running (or a program that is in execution)</div>
+</details>
+
+> Idle lawyers tend to become politicians, so there is a certain social value in keeping lawyers busy
+
+<details>
+    <summary>How does multitsasking work?</summary>
+    <div>Instead of letting the CPU sit idle while we wait for a process to finish executing, we frequently switch from one process to another</div>
+</details>
+
+<details>
+    <summary>Why do we need CPU scheduling?</summary>
+    <div>Keeping track of many processes in memory means that it is possible for more than one process to execute at the same time.</div>
+    <div>Therefore, we need CPU scheduling to determine how to execute many processes when they are ready to be executed at the same time</div>
+</details>
+
+### Dual mode and multimode operations
+
+<details>
+    <summary>Why do we need to distinguish between user mode code and kernel mode code?</summary>
+    <div>Because we don't want malicious or incorrect code to cause other programs in the system to execute incorrectly</div>
+</details>
+
+<details>
+    <summary>What is the purpose of the mode bit?</summary>
+    <div>To be able to distinguish between user mode code and kernel mode code</div>
+</details>
+
+![](./assets/f1.4.2.png)
+
+<details>
+    <summary>Denote the (6) steps of transitioning from user mode to kernel mode</summary>
+    <ol>
+        <li>A user program executes in user mode</li>
+        <li>Program tells the OS that it wants to use a system call</li>
+        <li>Asking the OS to use a system call triggers a software-generated interrupt (aka trap) that flips the mode bit (we're no in kernel mode)</li>
+        <li>The system call executes in kernel mode</li>
+        <li>The system call completes</li>
+        <li>The user program/process is picked up again and the system is back in user mode</li>
+    </ol>
+</details>
+
+![](./assets/p1.4.1.png)
+
+<details>
+    <summary>Is the hardware in kernel mode or user mode when the system boots?</summary>
+    <div>It is kernel mode</div>
+</details>
+
+<details>
+    <summary>What are privileged instructions?</summary>
+    <div>Machine instructions that can only be executed in kernel mode</div>
+</details>
+
+### Timer   
+
+<details>
+    <summary>Why do we need timers?</summary>
+    <div>To ensure that the OS always maintains control of the CPU</div>
+</details>
+
+<details>
+    <summary>What does a timer do?</summary>
+    <div>It interrupts the CPU after a specified amount of time</div>
+</details>
+
+## Chapter 1.5: Resource Management
+
+<details>
+    <summary>How many program counters does a single-threaded process have?</summary>
+    <div>One program counter</div>
+</details>
+
+<details>
+    <summary>What 3 things are operating systems responsible for when it comes to memory management?</summary>
+    <ul>
+        <li>Allocating and deallocating memory space as needed</li>
+        <li>Deciding which processes and data to move in and out of memory</li>
+        <li>Keeping track of which processes take up which addresses in memory</li>
+    </ul>
+</details>
+
+<details>
+    <summary>What are the 5 things an operating system is responsible for when it comes to file management?</summary>
+    <ul>
+        <li>Create and delete files</li>
+        <li>Create and delete directories</li>
+        <li>Back up files onto non-volatile storage</li>
+        <li>Support functions to manipulate files like <code>touch</code> <code>cat</code> and <code>mv</code></li>
+        <li>Mapping files onto mass storage</li>
+    </ul>
+</details>
+
+<details>
+    <summary>How does caching work?</summary>
+    <div>Instead of having to retrieve information from main memory, we can put it in a cache which is like a faster and easier to access "box" temporarily</div>
+</details>
+
+![](./assets/f1.5.1.png)
+
+![](./assets/f1.5.2.png)
+
+<details>
+    <summary>What 3 things is an I/O susbsytem made up of?</summary>
+    <ul>
+        <li>Memory management for buffering, caching, and spooling</li>
+        <li>Drivers for specific types of devices</li>
+        <li>A general device-driver interface</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Two important design issues for cache memory are [BLANK]</summary>
+    <div>Size and replacement policy</div>
+</details>
+
+<details>
+    <summary>What is the name we give to an instance of a program in execution?</summary>
+    <div>A process</div>
+</details>
+
+![](./assets/sg1.5.png)
+
+## Chapter 1.6: Security and Protection
+
+<details>
+    <summary>What is protection as it pertains to Operating Systems?</summary>
+    <div>Protection means any mechanism that controls the access that users and/or processes have over resources given to them by the computer system</div>
+</details>
+
+<details>
+    <summary>What is the job of security in operating systems?</summary>
+    <div>To defend against internal and external attacks</div>
+</details>
+
+<details>
+    <summary>UNIX systems escalate privileges by seeting which attribute?</summary>
+    <div>The <code>setuid</code> attribute</div>
+</details>
+
+![](./assets/sg1.6.png)
+
+## Chapter 1.7: Virtualization
+
+<details>
+    <summary>What is virtualization?</summary>
+    <div> It's like gaslighting your M2 MacBook Pro to think it has the hardware of a Windows machine</div>
+</details>
+
+![](./assets/f1.7.1.png)
+
+![](./assets/sg1.7.png)
+
+## Chapter 1.8: Distributed Systems
+
+<details>
+    <summary>What are distributed systems?</summary>
+    <div>A collection of connected computer systems that provide users with the rersources the sum of their parts maintain</div>
+</details>
+
+<details>
+    <summary>What is a network?</summary>
+    <div>Like a tunnel for two or more systems to communicate with each other</div>
+</details>
+
+<details>
+    <summary>What is a Local Area Network (LAN)?</summary>
+    <div>A network in which computers in the same room can communicate with each other</div>
+</details>
+
+<details>
+    <summary>What is a Wide Area Network (WAN)?</summary>
+    <div>A network in which computers in different buildings, cities, or countries can talk to each other</div>
+</details>
+
+<details>
+    <summary>What is a Personal Area Network (PAN)?</summary>
+    <div>A network mostly used by Bluetooth devices to communicate with each other like Airpods and your phone</div>
+</details>
+
+<details>
+    <summary>What is a network operating system?</summary>
+    <div>An operating system that provides features like sharing files across a network</div>
+</details>
+
+![](./assets/sg1.8.png)
+
+## Chapter 1.9: Kernel data structures
+
+![](./assets/f1.9.1.png)
+
+![](./assets/f1.9.2.png)
+
+![](./assets/f1.9.3.png)
+
+![](./assets/f1.9.4.png)
+
+![](./assets/f1.9.5.png)
+
+<details>
+    <summary>What is a bitmap?</summary>
+    <div>It's a string of <code>n</code> binary digits used to represent the status of <code>n</code> items</div>
+</details>
+
+![](./assets/sg1.9.png)
+
+## Chapter 1.10: Computing environments
+
+![](./assets/f1.10.1.png)
+
+![](./assets/f1.10.2.png)
+
+![](./assets/f1.10.3.png)
+
+![](./assets/sg1.10.png)
+
+
+## Chapter 1.11: Free and open-source operating systems
+
+![](./assets/sg1.11.png)
