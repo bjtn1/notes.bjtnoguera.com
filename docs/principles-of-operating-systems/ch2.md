@@ -92,3 +92,19 @@ description: "Where we learn about operating and computer systems, what they do,
 </details>
 
 ![](./assets/sg2.4.png)
+
+## Chapter 2.5: Linkers and loaders
+
+![](./assets/pa2.5.1.png)
+
+<details>
+    <summary>What does a loader do?</summary>
+    <div>Loads a binary executable file into memory so we can run it</div>
+</details>
+
+<details>
+    <summary>What does a linker do?</summary>
+    <div>It combines relocatable objectr files into a single executable file</div>
+</details>
+
+![](./assets/sg2.5.png)
