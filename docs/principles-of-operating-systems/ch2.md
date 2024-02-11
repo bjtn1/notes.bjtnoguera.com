@@ -47,3 +47,33 @@ description: "Where we learn about operating and computer systems, what they do,
 
 ## Chapter 2.3: System calls
 
+![](./assets/f2.3.1.png)
+
+<details>
+    <summary>What do system calls provide?</summary>
+    <div>They provide an interface to the services made available by the operating system</div>
+</details>
+
+![](./assets/pa2.3.2.png)
+
+![](./assets/f2.3.2.png)
+
+<details>
+    <summary>What are the 6 types of system calls?</summary>
+    <ul>
+        <li>Process control</li>
+        <li>File management</li>
+        <li>Device management</li>
+        <li>Informationn maintenance</li>
+        <li>Communications</li>
+        <li>Protection</li>
+    </ul>
+</details>
+
+![](./assets/f2.3.3.png)
+
+![](./assets/standard-c-library.png)
+
+![](./assets/sg2.3.png)
+
+
