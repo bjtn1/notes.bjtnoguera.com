@@ -190,7 +190,41 @@ Wow, to make my program runnable on different operating systems, I'm gonna have 
 ## Chapter 2.9: Building and booting an operating system
 
 :::important
-I skimmed this chapter because it seems to only talk about loading Linux, which porject 0 of this course already does
+I skimmed this chapter because it seems to only talk about loading Linux, which project 0 of this course already does
 :::
 
 ![](./assets/sg2.9.png)
+
+## Chapter 2.10: Operating-system debugging
+
+<details>
+    <summary>What is debugging?</summary>
+    <div>The process of finding and fixing errors</div>
+</details>
+
+<details>
+    <summary>What is performance tuning?</summary>
+    <div>The process of improving performance by removing processing bottlenecks</div>
+</details>
+
+<details>
+    <summary>What is a core dump?</summary>
+    <div>A capture of the memory of a process that has failed (in this context, core = memory)</div>
+</details>
+
+<details>
+    <summary>What do we call a failure in the kernel?</summary>
+    <div>A crash</div>
+</details>
+
+<details>
+    <summary>What happens when a crash occurs (as it relates to debugging and logging)?</summary>
+    <div>The error information is saved to a log file, and the memory state is saved to a crash dump</div>
+</details>
+
+<details>
+    <summary>What is the difference between counters and tracing for performance monitoring?</summary>
+    <div>Counters count the number of events; tracers follow the steps of a specific event</div>
+</details>
+
+![](./assets/sg2.10.png)
