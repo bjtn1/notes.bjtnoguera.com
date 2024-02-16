@@ -166,4 +166,94 @@ description: "Where we learn about processes"
 
 ![](./assets/sg3.2.png)
 
-## Chapter 3.3: 
+## Chapter 3.3: Operations on processes
+
+![](./assets/f3.3.1.png)
+
+<details>
+    <summary>When a process births a child, what 2 things can happen to the parent?</summary>
+    <ul>
+        <li>Parent and child have a beautiful time executing at the same time</li>
+        <li>Parent sits in his couch, waiting for his kids to be done playing ball outside</li>
+    </ul>
+</details>
+
+<details>
+    <summary>When a process births a child, what are the 2 possible characteristics of that child?</summary>
+    <ul>
+        <li>The child is an exact copy of his mom, so it has the same program and data as mom</li>
+        <li>The child has an entirely new program loaded into it</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Creating a new process uses the <code>fork()</code> system call, what happens after that?</summary>
+    <ol>
+        <li>The address space of parent gets copied to child</li>
+        <li>Both processes continue execution after <code>fork()</code></li>
+    </ol>
+</details>
+
+<details>
+    <summary>What does the <code>exec()</code> system call do?</summary>
+    <div>It loads a binary file into memory</div>
+</details>
+
+![](./assets/f3.3.2.png)
+
+![](./assets/f3.3.3.png)
+
+<details>
+    <summary>When forking a parent, what will its child's PID be? What about the parent's PID?</summary>
+    <div>The child's PID will be == 0; The parent's will be > 0</div>
+</details>
+
+![](./assets/pa3.3.1.png)
+
+<details>
+    <summary>What is the order of a C program that forks a parent?</summary>
+    ```c
+    pid_t pid;
+    pid = fork();
+
+    if (pid == 0) {
+        // This is the child
+    }
+
+    if (pid > 0) {
+        wait(NULL);
+        // This is the parent
+    }
+
+    if (pid < 0) {
+        // Some error occurred
+    }
+    ```
+</details>
+
+<details>
+    <summary>What does the `exit()` system call do?</summary>
+    <div>It asks the operating system to delete the process that used it</div>
+</details>
+
+<details>
+    <summary>What does cascading termination mean?</summary>
+    <div>It means that if the parent dies, all of its kids must die with it (so sad)</div>
+</details>
+
+<details>
+    <summary>What is a zombie process?</summary>
+    <div>A child who has passed away, and whose parent did not call `wait()`</div>
+</details>
+
+<details>
+    <summary>What is an orphan process?</summary>
+    <div>A child whose parent passed away before the child terminated (so sad)</div>
+</details>
+
+<details>
+    <summary>What does UNIX/Linux do about orphans?</summary>
+    <div>They make `systemd` the new parnet (so happy)</div>
+</details>
+
+![](./assets/sg3.3.png)
