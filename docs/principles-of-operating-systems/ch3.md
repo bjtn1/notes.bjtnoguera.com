@@ -257,3 +257,49 @@ description: "Where we learn about processes"
 </details>
 
 ![](./assets/sg3.3.png)
+
+## Chapter 3.4: Interprocess communication
+
+<details>
+    <summary>What is an independent process?</summary>
+    <div>This is a characteristic of processes that execute concurrently. This is a process that does not share data with any other processes executing in the system</div>
+</details>
+
+<details>
+    <summary>What is cooperating process?</summary>
+    <div>This is a characteristic of processes that execute concurrently. This is a process who affects, or is affected by, other processes executing in the system</div>
+</details>
+
+<details>
+    <summary>What is the point of cooperating processes?</summary>
+    <div>They allow you to:</div>
+    <ul>
+        <li>Speed up computational processes by divide and conquering!</li>
+        <li>Share information between different processes</li>
+        <li>Divide functions into separate processes or threads to increase modularioty</li>
+    </ul>
+</details>
+
+<details>
+    <summary>What is the point of an interprocess communication (IPC) mechanism?</summary>
+    <div>To allow cooperating process to exchange data</div>
+</details>
+
+<details>
+    <summary>What is the main idea behind the shared memory model of IPC?</summary>
+    <div>The main idea is that cooperating processes share a section of memory</div>
+</details>
+
+<details>
+    <summary>What is the main idea behind the message passing model of IPC?</summary>
+    <div>The main idea is that each cooperating process communicates with the process that it's cooperatin with. In other words, it's like a tunnel exists between only those processes that need to talk to one another/</div>
+</details>
+
+![](./assets/f3.4.1.png)
+
+<details>
+    <summary>Why is shared memory typically faster than message-passing?</summary>
+    <div>Because message passing is usually implemented thru system calls</div>
+</details>
+
+![](./assets/sg3.4.png)
