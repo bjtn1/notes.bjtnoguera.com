@@ -303,3 +303,149 @@ description: "Where we learn about processes"
 </details>
 
 ![](./assets/sg3.4.png)
+
+## Chapter 3.5: IPC in shared memory systems
+
+<details>
+    <summary>In your own words, explain the **producer-consumer** problem</summary>
+    <div>You have a producer, a buffer (like a basket), and a consumer.</div>
+    <div>The producer isn't allowed to put things in the basket until space is available</div>
+    <div>The consumer cannot take things out of the basket until the producer is done "writing" them to the buffer (sorry, I dont have an analogy for this)</div>
+    <div>The problem is this: How do we ensure that the producers don't produce data into the buffer if it's full, and consumers don't consume data from the buffer if it's empty?</div>
+</details>
+
+<details>
+    <summary>What is an unbounded buffer?</summary>
+    <div>It is a "solution" to the producer-consumer problem in which the producer never waits to write things to the buffer, but the consumer may wait.</div>
+</details>
+
+<details>
+    <summary>What is a bounded buffer?</summary>
+    <div>A "solution" to the producer-consumer problem in which the consumer waits for a new item, and the producer waits if and only if the buffer is full</div>
+</details>
+
+![](./assets/f3.5.1.png)
+
+![](./assets/f3.5.2.png)
+
+![](./assets/sg3.5.png)
+
+## Chapter 3.6: IPC in message passing systems
+
+<details>
+    <summary>What 2 operations must a message passing facility provide?</summary>
+    <div>`send(message)` and `receive(message)`</div>
+</details>
+
+<details>
+    <summary>What must exist for two processes to be able to communicate with each other?</summary>
+    <div>A communication link!</div>
+</details>
+
+<details>
+    <summary>Whst is direct communication?</summary>
+    <div>A method of implementing message passing in which each process must name the process it wants to send a message to, and which process it wants to receive a message from</div>
+</details>
+
+<details>
+    <summary>What are the 3 properties of direct communication?</summary>
+    <ul>
+        <li>Link is automatically established between processes that need to talk to each other</li>
+        <li>1 link, 2 processes</li>
+        <li>Only 1 link per 2 processes</li>
+    </ul>
+</details>
+
+<details>
+    <summary>What does "symmetry in addressing" mean?</summary>
+    <div>It means that each process must know who they're sending a message to, and who they're getting a message from</div>
+</details>
+
+<details>
+    <summary>What does "asymmetry in addressing" mean?</summary>
+    <div>This means that each process must know who they're sending a message to, but the receiver must identify the name of the process it communicated with</div>
+</details>
+
+<details>
+    <summary>What is one disadvantage of both of the previously mentioned schemes?</summary>
+    <div>They offer limited modularity</div>
+</details>
+
+<details>
+    <summary>What is indirect communication?</summary>
+    <div>A type of communication link in which messages are sent to and received from mailboxes or ports</div>
+</details>
+
+<details>
+    <summary>What are the 3 properties of indirect communication?</summary>
+    <ul>
+        <li>Link is only established if two processes have a shared mailbox</li>
+        <li>1 link, 2 or more processes</li>
+        <li>1 pair of communicating processes, several different links may exist</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Given a mailbox, a message in the mailbox, and 3 processes that share the mailbox, what are the options for deciding which process will receive the message in the mailbox?</summary>
+    <ul>
+        <li>To allow 1 link to be associated with at most 2 processes</li>
+        <li>To allow at most 1 process at a time to execute a `receive()` instruction</li>
+        <li>To allow the system to select arbitrarily which process will receive the message</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Each mailbox must have a unique [BLANK]</summary>
+    <div>Owner!</div>
+</details>
+
+<details>
+    <summary>What happens if a process that owns a mailbox terminates?</summary>
+    <div>He takes the mailbox with him (:0)</div>
+</details>
+
+<details>
+    <summary>What does blocking send mean?</summary>
+    <div>This is a type of synchronization where the sending process is blocked nuntil the message is received</div>
+</details>
+
+<details>
+    <summary>What does nonblocking send mean?</summary>
+    <div>This is a type of synchronization where the sending process sends its message and goes back to work</div>
+</details>
+
+<details>
+    <summary>What does blocking receive mean?</summary>
+    <div>This is a type of synchronization where the receiver is blocked from working until a message is available</div>
+</details>
+
+<details>
+    <summary>What does nonblocking receive mean?</summary>
+    <div>The receiver retrieves either a valid message or a null</div>
+</details>
+
+<details>
+    <summary>What is a `rendezvous`?</summary>
+    <div>An event in a communication process where you have a `blocking send()` and a `blocking receive()`</div>
+</details>
+
+![](./assets/f3.6.1.png)
+
+![](./assets/f3.6.2.png)
+
+<details>
+    <summary>What is a zero capacity queue?</summary>
+    <div>It is a type of buffer in which the buffer can have no messages waiting in it. Sender blocks till receives gets the message</div>
+</details>
+
+<details>
+    <summary>What is a bounded capacity queue?</summary>
+    <div>A buffer of length `n`</div>
+</details>
+
+<details>
+    <summary>What is an unbounded capacity queue?</summary>
+    <div>Take a wild guess, Sherlock</div>
+</details>
+
+![](./assets/sg3.6.png)
