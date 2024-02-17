@@ -487,3 +487,40 @@ description: "Where we learn about processes"
 ![](./assets/f3.7.8.png)
 
 ![](./assets/sg3.7.png)
+
+## Chapter 3.8: Communication in client-server systems
+
+<details>
+    <summary>What is a socket?</summary>
+    <div>An endpoint for communication</div>
+</details>
+
+<details>
+    <summary>What does a socket consist of?</summary>
+    <div>An IP address and a port number</div>
+</details>
+
+![](./assets/f3.8.1.png)
+
+<details>
+    <summary>What is a well known port?</summary>
+    <div>All ports below 1024</div>
+</details>
+
+![](./assets/f3.8.2.png)
+
+<details>
+    <summary>What is the loopback address?</summary>
+    <div>127.0.0.1, an address that refers to the computer itself</div>
+</details>
+
+![](./assets/f3.8.3.png)
+
+![](./assets/f3.8.4.png)
+
+<details>
+    <summary>What is External Data Representation (XDR), and what is it used for?</summary>
+    <div>It is a technique for resolving data representation between two different hosts communicating using RPCs</div>
+</details>
+
+![](./assets/sg3.8.png)
