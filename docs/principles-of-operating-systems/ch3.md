@@ -406,7 +406,7 @@ description: "Where we learn about processes"
 
 <details>
     <summary>What does blocking send mean?</summary>
-    <div>This is a type of synchronization where the sending process is blocked nuntil the message is received</div>
+    <div>This is a type of synchronization where the sending process is blocked until the message is received</div>
 </details>
 
 <details>
@@ -449,3 +449,41 @@ description: "Where we learn about processes"
 </details>
 
 ![](./assets/sg3.6.png)
+
+## Chapter 3.7: Examples of IPC systems
+
+![](./assets/f3.7.1.png)
+
+![](./assets/f3.7.2.png)
+
+![](./assets/f3.7.3.png)
+
+![](./assets/f3.7.4.png)
+<details>
+    <summary>Message passing in Windows is known as?</summary>
+    <div>Advanced Local Procedure Call</div>
+</details>
+
+<details>
+    <summary>What is an ordinary pipe?</summary>
+    <div>It's a way for two processes to communicate with each other in which</div>
+    <ul>
+        <li>Producer writes to one end of the pipe</li>
+        <li>Consumer reades from the other end</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Which type of pipe allows several unrelated processes to use the pipe for communication?</summary>
+    <div>A named pipe!</div>
+</details>
+
+![](./assets/f3.7.5.png)
+
+![](./assets/f3.7.6.png)
+
+![](./assets/f3.7.7.png)
+
+![](./assets/f3.7.8.png)
+
+![](./assets/sg3.7.png)
