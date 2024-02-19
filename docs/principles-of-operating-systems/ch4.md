@@ -56,3 +56,121 @@ description: "Where we learn about threads"
         <li>Files</li>
     </ul>
 </details>
+
+![](./assets/sg4.1.png)
+
+## Chapter 4.2: Multicore programming
+
+<details>
+    <summary>What is a multicore system?</summary>
+    <div>A system that contains a single processing chip with multiple computing cores</div>
+</details>
+
+
+![](./assets/pa4.2.1.png)
+
+![](./assets/pa4.2.2.png)
+
+<details>
+    <summary>What is the difference between concurrency and parallelism?</summary>
+    <div>Concurrency: Every task in your to-do list gets to make progress!</div>
+    <div>Parallelism: You can do more than one task at the same time</div>
+</details>
+
+<details>
+    <summary>What are the 5 challenges that arise when programming for multicore systems?</summary>
+    <ul>
+        <li>Identifying tasks: this means where in my program can I find areas that can benefit from parallellism and/or concurrency?</li>
+        <li>Balance: this means that each task must perform equal work of equal value</li>
+        <li>Data splitting: this means dividing the data into separate cores</li>
+        <li>Dats dependency: make sure one task's data isn't dependent on another task's data</li>
+        <li>Testing and debugging is a pain in the butt LOL</li>
+    </ul>
+</details>
+
+![](./assets/amdahls-law.png)
+
+<details>
+    <summary>What is data parallelism?</summary>
+    <div>1 data over cores</div>
+    <div>1 data, several cores performing the same operation</div>
+    <div>Distribute one data over several threads that perform the same operation on the data</div>
+    <div>Think of summing an array by having thread $T1$ sum $[0] ... [n/2 - 1]$ on core 0, and $T2$ sum $[n/2-1] ... [n-1]$ on core 1</div>
+</details>
+
+<details>
+    <summary>What is task parallelism?</summary>
+    <div>Tasks (threads) over cores</div>
+    <div>Distribute threads across multiple cores</div>
+    <div>Imagine a polyamorous couple (threads) who has to do household chores (operations on some data). One person can do the dishes while another takes out the trashwhile another cleans the bathroom while another buys groceries</div>
+</details>
+
+![](./assets/f4.2.1.png)
+
+<details>
+    <summary>A [BLANK] system allows more than one task to run simultaneously</summary>
+    <div>Parallel</div>
+</details>
+
+<details>
+    <summary></summary>
+    <div></div>
+</details>
+
+![](./assets/sg4.2.png)
+
+## Chapter 4.3: Multithreading models
+
+We'll be looking at 3 ways of how to establish a relationship between user threads and kernel threads
+
+![](./assets/f4.3.1.png)
+
+<details>
+    <summary>What are the 3 common ways/models to establish a relationship between user and kernel threads</summary>
+    <ul>
+        <li>Many-to-one model</li>
+        <li>One-to-one model</li>
+        <li>Many-to-many model</li>
+    </ul>
+</details>
+
+<details>
+    <summary>What is the many-to-one model all about?</summary>
+    <div>Have one kernel thread, and assign a bunch of user threads to it</div>
+</details>
+
+<details>
+    <summary>What is a disadvantage of the many-to-one model</summary>
+    <div>If a thread needs to make a blocking sys call, the entire process will block</div>
+    <div>Parallelism is not possible because only one thread can access the kernel at a time</div>
+</details>
+
+![](./assets/f4.3.2.png)
+
+<details>
+    <summary>What is the one-to-one model all about?</summary>
+    <div>One kernel thread per user thread</div>
+</details>
+
+<details>
+    <summary>What is a disadvantage of the one-to-one model?</summary>
+    <div>If you got 9283746 user threads, you're gonna need 9283746 kernel threads. This has an impact on the performance of a system</div>
+</details>
+
+![](./assets/f4.3.3.png)
+
+<details>
+    <summary>What is the many-to-many model all about?</summary>
+    <div>Take $n$ user level threads, and assign $\le n$ kernel threads to each of them</div>
+</details>
+
+![](./assets/f4.3.4.png)
+
+<details>
+    <summary>Which multithreding model is used by both Linux and Windows?</summary>
+    <div>One-to-one model</div>
+</details>
+
+![](./assets/sg4.3.png)
+
+
