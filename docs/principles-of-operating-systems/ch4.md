@@ -202,3 +202,73 @@ Where we talk about thread creation in POSIX Pthreads, Windows, and Java
 ![](./assets/f4.4.4.png)
 
 ![](./assets/sg4.4.png)
+
+## Chapter 4.5: Implicit Threading
+
+Where we continue talking about the problems of threading in multicore systems as they relato to program correctness.
+
+We'll talk about 4 approaches to implicit threading.
+
+<details>
+    <summary>What is implicit threading?</summary>
+    <div>Transferring the responsability of creating nad managing threads from app devs to compilers and run=time libraries</div>
+</details>
+
+<details>
+    <summary>What is the general idea behind a thread pool?</summary>
+    <div>You make a bunch of threads at start-up, then when you need a thread for something, you pikc on eout from the pool of threads you just made</div>
+</details>
+
+<details>
+    <summary>What happens if there are no available threads in the pool?</summary>
+    <div>The task is queued until a thread is available</div>
+</details>
+
+<details>
+    <summary>What are the 3 benefits of thread pools?</summary>
+    <ul>
+        <li>Picking a thread from the pool is faster then creating one</li>
+        <li>Separating thread creation from task performance is a good thing!</li>
+        <li>Putting limits on how many threads you have makes your CPU a happier CPU!</li>
+    </ul>
+</details>
+
+<details>
+    <summary>What is the idea of the for-join model?</summary>
+    <div>Parent thread creates many kids, then waits for its kids to finish their job and join the parent</div>
+</details>
+
+![](./assets/f4.5.2.png)
+
+![](./assets/pa4.5.2.png)
+
+![](./assets/f4.5.3.png)
+
+![](./assets/f4.5.4.png)
+
+<details>
+    <summary>What is referred to by tasks?</summary>
+    <div>Sections of code</div>
+</details>
+
+<details>
+    <summary>How does GCD (Grand central dispatch) work?</summary>
+    <div>GCD places tasks on a dispatch queue that then get assigned to a thread from a pool of threads managed by GCD</div>
+</details>
+
+<details>
+    <summary>What is a serial dispatch queue?</summary>
+    <div>A dispatch queue where removed tasks must complete execution before another task is removed</div>
+</details>
+
+<details>
+    <summary>What is a concurrent dispatch queue?</summary>
+    <div>A dispatch queue where several tasks may be removed at a time</div>
+</details>
+
+<details>
+    <summary>What does OpenMP do when it encoutner the `#pragma omp parallel` directive?</summary>
+    <div>It creates as many threads as there are processing cores</div>
+</details>
+
+![](./assets/sg4.5.png)
