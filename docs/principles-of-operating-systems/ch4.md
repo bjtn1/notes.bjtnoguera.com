@@ -173,4 +173,32 @@ We'll be looking at 3 ways of how to establish a relationship between user threa
 
 ![](./assets/sg4.3.png)
 
+## Chapter 4.4: Thread libraries
 
+Where we talk about thread creation in POSIX Pthreads, Windows, and Java
+
+<details>
+    <summary>What is asynchronous threading all about?</summary>
+    <div>Parent thread creates child thread, then parent continues execution alongside its child (concurrently and independently of one another)</div>
+    <div>This means no data sharing between father and son</div>
+</details>
+
+<details>
+    <summary>What is synchronous threading all about?</summary>
+    <div>Father thread creates children, then wait for its children to be done with their jobs before continuing execution</div>
+</details>
+
+<details>
+    <summary>What is Pthreads?</summary>
+    <div>It is a specification for how threads should behave, NOT an implementation</div>
+</details>
+
+![](./assets/f4.4.1.png)
+
+![](./assets/f4.4.2.png)
+
+![](./assets/f4.4.3.png)
+
+![](./assets/f4.4.4.png)
+
+![](./assets/sg4.4.png)
