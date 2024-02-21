@@ -372,3 +372,11 @@ Where we discuss issues in designing multithreaded programs
 </details>
 
 ![](./assets/sg4.6.png)
+
+## Chapter 4.7: Operating-system examples
+
+![](./assets/f4.7.1.png)
+
+![](./assets/f4.7.2.png)
+
+
